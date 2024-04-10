@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Психолог Лейла Алиева</title>
+
+    <!-- custom style link-->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- font link-->
+    <link href="https://fonts.googleapis.com/css?family=Sniglet" rel="stylesheet" type="text/css">
+
+    <!-- font awesome link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+<!-- header section start-->
+
+<header>
+
+<a href="#" class="logo"> <i class="fa-solid fa-tooth"></i>
+    Leyla Aliyeva</a>
+
+<div id="menu-btn" class="fas fa-bars"></div>
+
+<ul class="navbar">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">What am I working with?</a></li>
+    <li><a href="#doctors">Approaches</a></li>
+    <li><a href="#review">Education</a></li>
+    <li><a href="#contacts">Price</a></li>
+    <li><a href="#contacts">Contacts</a></li>
+</ul>
+</header>
+
+<!-- header section end -->
+
+<!-- script link -->
+
+<script>
+
+let menu = document.querySelector('#menu-btn');
+let navbar = document.querySelector('.navbar');
+
+menu.onclick = () => {
+    menu.classList.toggle('fa-times');
+    navbar.classList.toggle('active');
+}
+
+</script>
+
+</body>
+</html>
