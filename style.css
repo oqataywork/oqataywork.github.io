@@ -24,10 +24,10 @@ html {
 
 :root {
   --white-clr: #f8f2ed;
-  --dark-clr: #70806b;
+  --dark-clr: #222;
   --pink-clr: #f0dacb;
-  --blue-clr: #71816c;
-  --box-shadow: 0 0.8rem 1rem #e8e4d9;
+  --green-clr: #70806b;
+  --box-shadow: 0 0.8rem 1rem rgba(240, 218, 203, 0.3);
   --logo-fz: calc(18px + (30 - 18) * ((100vw - 300px) / (1600 - 300)));
   --biggest-fz: calc(30px + (80 - 30) * ((100vw - 300px) / (1600 - 300)));
   --large-fz: calc(20px + (35 - 20) * ((100vw - 300px) / (1600 - 300)));
@@ -112,16 +112,16 @@ header .navbar li a {
   color: var(--dark-clr); /* цвет шрифта в навигации */
   transition: 0.3s;
   padding: 0.7rem;
-  background: linear-gradient(var(--blue-clr) 0 0) 0 0,
-    linear-gradient(var(--blue-clr) 0 0) 0 0,
-    linear-gradient(var(--blue-clr) 0 0) 100% 100%,
-    linear-gradient(var(--blue-clr) 0 0) 100% 100%;
+  background: linear-gradient(var(--green-clr) 0 0) 0 0,
+    linear-gradient(var(--green-clr) 0 0) 0 0,
+    linear-gradient(var(--green-clr) 0 0) 100% 100%,
+    linear-gradient(var(--green-clr) 0 0) 100% 100%;
   background-repeat: no-repeat;
   background-size: 1.5rem 0.2rem, 0.2rem 1.5rem;
 }
 
 header .navbar li a:hover {
-  color: var(--blue-clr); /* цвет текста навигации при наведении */
+  color: var(--green-clr); /* цвет текста навигации при наведении */
   background-position: 100% 0%, 0% 100%, 0% 100%, 100% 0;
 }
 
@@ -141,6 +141,7 @@ header .navbar li a:hover {
 
 .home {
   margin-top: 3.5%;
+  background-color: var(---clr);
 }
 
 .home .row {
@@ -167,10 +168,6 @@ header .navbar li a:hover {
   font-size: var(--medium-fz);
 }
 
-.homeimg img {
-  max-width: 80%;
-}
-
 .home .row .homeimg {
   flex: 1 1 40rem;
   text-align: center;
@@ -179,7 +176,7 @@ header .navbar li a:hover {
 .homeimg {
   width: 50%; /* Занимаем половину ширины экрана */
   height: 100vh; /* Занимаем всю высоту экрана */
-  background-color: var(--blue-clr); /* Задаем черный цвет фона */
+  background-color: var(--green-clr); /* Задаем черный цвет фона */
   display: flex;
   flex-direction: column; /* Изменение направления flex на вертикальное */
   justify-content: center;
@@ -228,11 +225,11 @@ header .navbar li a:hover {
 
   header .navbar {
     position: absolute;
-    top: 99%;
+    top: 100%;
     left: 0;
     right: 0;
-    border-top: 0.1rem solid var(--white-clr);
     border-bottom: 0.1rem solid var(--white-clr);
+    background-color: rgba(240,218,203);
     display: flex;
     flex-direction: column;
     align-items: center;
