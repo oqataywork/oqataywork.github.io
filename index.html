@@ -1,78 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Психолог Лейла Алиева</title>
 
     <!-- custom style link-->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 
     <!-- font awesome link-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
 
-<body>
-<!-- header section start-->
+  <body>
+    <!-- header section start-->
 
-<header>
+    <header>
+      <a href="#home" class="logo">
+        <i class="fa-solid fa-tooth"></i>
+        Лейла Алиева
+        <br />
+        <span class="undertext">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;клинический психолог</span>
+      </a>
 
-<a href="#home" class="logo"> <i class="fa-solid fa-tooth"></i>
-    Лейла Алиева</a>
+      <div id="menu-btn" class="fas fa-bars"></div>
 
-<div id="menu-btn" class="fas fa-bars"></div>
+      <ul class="navbar">
+        <li><a href="#about">Обо мне</a></li>
+        <li><a href="#requsts">С чем я работаю?</a></li>
+        <li><a href="#approaches">Мои подходы</a></li>
+        <li><a href="#education">Образование</a></li>
+        <li><a href="#servicecost">Стоимость услуг</a></li>
+        <li><a href="#contacts">Контакты</a></li>
+      </ul>
+    </header>
 
-<ul class="navbar">
-    <li><a href="#about">Обо мне</a></li>
-    <li><a href="#requsts">С чем я работаю?</a></li>
-    <li><a href="#approaches">Мои подходы</a></li>
-    <li><a href="#education">Образование</a></li>
-    <li><a href="#servicecost">Стоимость услуг</a></li>
-    <li><a href="#contacts">Контакты</a></li>
-</ul>
-</header>
+    <!-- header section end -->
 
-<!-- header section end -->
+    <!-- home section start -->
 
+    <section id="home" class="home">
+      <div class="row">
+        <div class="content">
+          <h3>Психолог Лейла Алиева</h3>
+          <p>Я — ваш партнер, который сопровождает вас на пути перемен.</p>
+          <a href="#about" class="homebtn">Обо мне</a>
+          <a href="#appointment" class="homebtn">Записаться на консультацию</a>
+        </div>
+        <div class="homeimg">
+          <img src="/Content//Leyla.jpg" />
+        </div>
+      </div>
+    </section>
 
-<!-- home section start -->
+    <!-- home section end -->
 
-<section id="home" class="home">
+    <!-- script link -->
 
-<div class="row">
-    <div class="content">
-        <h3> Психолог Лейла Алиева</h3>
-        <p> Я — ваш партнер, который сопровождает вас на пути перемен</p>
-        <a href="#about" class="btn">Обо мне</a>
-        <a href="#appointment" class="btn">Записаться на консультацию</a>
-    </div>
-    <div class="img">
-        <img src ="/Content//photo_2024-03-16_22-39-27.jpg">
-    </div>
-    <div>
+    <script>
+      let menu = document.querySelector("#menu-btn");
+      let navbar = document.querySelector(".navbar");
 
-    </div>
-</div>
-
-</section>
-
-<!-- home section end -->
-
-
-<!-- script link -->
-
-<script>
-
-let menu = document.querySelector('#menu-btn');
-let navbar = document.querySelector('.navbar');
-
-menu.onclick = () => {
-    menu.classList.toggle('fa-times');
-    navbar.classList.toggle('active');
-}
-
-</script>
-
-</body>
+      menu.onclick = () => {
+        menu.classList.toggle("fa-times");
+        navbar.classList.toggle("active");
+      };
+    </script>
+  </body>
 </html>

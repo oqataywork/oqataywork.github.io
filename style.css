@@ -1,199 +1,250 @@
 @font-face {
-    font-family: 'StampatelloFaceto';
-    src: url('/Fonts/StampatelloFacetoKern.otf') format('opentype');
+  font-family: "StampatelloFaceto";
+  src: url("/Fonts/StampatelloFacetoKern.otf") format("opentype");
 }
 
 * {
- font-family: 'StampatelloFaceto', sans-serif;
- margin: 0;
- padding: 0;
- box-sizing: border-box;
- text-decoration: none;
- list-style: none;
- line-height: 1.3;
- border: 0;
- outline: 0;
+  font-family: "StampatelloFaceto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  line-height: 1.3;
+  border: 0;
+  outline: 0;
 }
 
 html {
-    font-size: 62.5%;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-    scroll-padding-top: 7rem;
-}
-
-img {
-    max-width: 100%
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
 }
 
 :root {
-    --white-clr: #f2f2f2;
-    --main-clr: #222;
-    --background-clr: #c67fa7;
-    --box-shadow: 0 .8rem 1rem rgba(0,0,0,.7);
-    --logo-fz: calc(18px + (30 - 18) * ((100vw - 300px) / (1600 -
-    300)));
-    --biggest-fz: calc(30px + (80 - 30) * ((100vw - 300px) / (1600 -
-    300)));
-    --large-fz: calc(20px + (35 - 20) * ((100vw - 300px) / (1600 -
-    300)));
-    --medium-fz: calc(14px + (20 - 14) * ((100vw - 300px) / (1600 - 
-    300)));
-    --small-fz: calc(12px + (18 - 12) * ((100vw - 300px) / (1600 -
-    300)));
-    --number-icons: calc(25px + (40 - 25) * ((100vw - 300px) / (1600 -
-    300)));
+  --white-clr: #f8f2ed;
+  --dark-clr: #70806b;
+  --pink-clr: #f0dacb;
+  --blue-clr: #71816c;
+  --box-shadow: 0 0.8rem 1rem #e8e4d9;
+  --logo-fz: calc(18px + (30 - 18) * ((100vw - 300px) / (1600 - 300)));
+  --biggest-fz: calc(30px + (80 - 30) * ((100vw - 300px) / (1600 - 300)));
+  --large-fz: calc(20px + (35 - 20) * ((100vw - 300px) / (1600 - 300)));
+  --medium-fz: calc(14px + (20 - 14) * ((100vw - 300px) / (1600 - 300)));
+  --small-fz: calc(12px + (18 - 12) * ((100vw - 300px) / (1600 - 300)));
+  --number-icons: calc(25px + (40 - 25) * ((100vw - 300px) / (1600 - 300)));
 }
 
 body {
-    --sb-track-color: #222;
-    --sb-thumb-color: var(--main-clr);
-    --sb-size: 1.2rem;
-    background: var(--white-clr);
+  --sb-track-color: var(--dark-clr);
+  --sb-thumb-color: var(--pink-clr);
+  --sb-size: 1.2rem;
+  background: var(--white-clr);
 }
- 
+
 body::-webkit-scrollbar {
-    width: var(--sb-size);
+  width: var(--sb-size);
 }
 
 body::-webkit-scrollbar-track {
-    background: var(--sb-track-color);
-    border-radius: 1rem;
+  background: var(--sb-track-color);
+  border-radius: 1rem;
 }
 
 body::-webkit-scrollbar-thumb {
-    background: var(--sb-thumb-color);
-    border-radius: 1rem;
+  background: var(--sb-thumb-color);
+  border-radius: 1rem;
 }
 
 section {
-    padding: 2rem 9pc;
+  padding: 2rem 9pc;
+  padding-right: 0%;
+  padding-left: 0%;
 }
 
 /*header section start */
 
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: var(--background-clr);
-    width: 100%;
-    height: 80px;
-    box-shadow: var(--box-shadow);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 9%;
-    z-index: 9999999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--pink-clr);
+  width: 100%;
+  height: 13%;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 9%;
+  padding-left: 3%;
+  z-index: 9999999;
 }
 
 header .logo {
-    font-size: var(--logo-fz);
-    color: var(--main-clr);
+  font-size: var(--logo-fz);
+  color: var(--dark-clr);
+  padding-top: 2%;
 }
 
 header .logo .fa-tooth {
-    color: var(--white-clr)
+  font-size: var(--logo-fz);
+  color: var(--white-clr);
+}
+
+header .logo .undertext {
+  font-size: var(--medium-fz);
+  vertical-align: top;
 }
 
 header .navbar {
-    display: flex;
+  display: flex;
 }
 
-header .navbar li{
-    margin: 0rem 1.5rem;
-    list-style-type: none;
+header .navbar li {
+  margin: 0rem 1.5rem;
+  list-style-type: none;
 }
 
-header .navbar li a{
-    font-size: var(--medium-fz);
-    color: var(--main-clr);
-    transition: 0.3s;
-    padding: 0.7rem;
-    background: 
-        linear-gradient(var(--main-clr) 0 0) 0 0,
-        linear-gradient(var(--main-clr) 0 0) 0 0,
-        linear-gradient(var(--main-clr) 0 0) 100% 100%,
-        linear-gradient(var(--main-clr) 0 0) 100% 100%;
-    background-repeat: no-repeat;
-    background-size: 1.5rem .2rem, .2rem 1.5rem;
+header .navbar li a {
+  font-size: var(--medium-fz);
+  color: var(--dark-clr); /* цвет шрифта в навигации */
+  transition: 0.3s;
+  padding: 0.7rem;
+  background: linear-gradient(var(--blue-clr) 0 0) 0 0,
+    linear-gradient(var(--blue-clr) 0 0) 0 0,
+    linear-gradient(var(--blue-clr) 0 0) 100% 100%,
+    linear-gradient(var(--blue-clr) 0 0) 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 1.5rem 0.2rem, 0.2rem 1.5rem;
 }
 
-header .navbar li a:hover{
-    color: var(--main-clr);
-    background-position: 100% 0%, 0% 100%, 0% 100%, 100% 0;
+header .navbar li a:hover {
+  color: var(--blue-clr); /* цвет текста навигации при наведении */
+  background-position: 100% 0%, 0% 100%, 0% 100%, 100% 0;
 }
 
 #menu-btn {
-    color: var(--main-clr);
-    font-size: var(--medium-fz);
-    cursor: pointer;
-    border: .1rem solid var(--main-clr);
-    padding: 0.5rem 1.5rem;
-    border-radius: 0.5rem;
-    display: none;
+  color: var(--dark-clr);
+  font-size: var(--medium-fz);
+  cursor: pointer;
+  border: 0.1rem solid var(--dark-clr);
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  display: none;
 }
-
 
 /*header section end */
 
 /*home section start */
 
 .home {
-    margin-top: 7rem;
+  margin-top: 3.5%;
 }
 
 .home .row {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap-reverse;
-    gap: 1.5rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+  gap: 1.5rem;
 }
 
 .home .row .content {
-    flex: 1 1 40rem;
-    text-align: center;
+  flex: 1 1 40rem;
+  text-align: center;
 }
 
 .home .row .content h3 {
-    margin-bottom: 1rem;
-    color: var(--main-clr);
-    font-size: var(--biggest-fz)
+  margin-bottom: 1rem;
+  color: var(--dark-clr);
+  font-size: var(--biggest-fz);
+}
+
+.home .row .content p {
+  margin-bottom: 1.5rem;
+  color: var(--dark-clr);
+  font-size: var(--medium-fz);
+}
+
+.homeimg img {
+  max-width: 80%;
+}
+
+.home .row .homeimg {
+  flex: 1 1 40rem;
+  text-align: center;
+}
+
+.homeimg {
+  width: 50%; /* Занимаем половину ширины экрана */
+  height: 100vh; /* Занимаем всю высоту экрана */
+  background-color: var(--blue-clr); /* Задаем черный цвет фона */
+  display: flex;
+  flex-direction: column; /* Изменение направления flex на вертикальное */
+  justify-content: center;
+  align-items: center;
+}
+
+.homeimg img {
+  border-radius: 50%/25%; /* меняем border-radius местами */
+  width: 50%; /* меняем ширину и высоту местами */
+  height: 70%;
+  margin: 2em auto; /* оставляем или изменяем, в зависимости от желаемого расположения */
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.homebtn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 20px;
 }
 
 /*home section end */
 
-
 /* media queries */
 @media (max-width: 768px) {
-    #menu-btn {
-        display: block;
-    }
+  #menu-btn {
+    display: block;
+  }
 
-    header {
-        padding: 1rem 2rem;
-    }
+  header {
+    padding: 1rem 2rem;
+  }
 
-    header .navbar {
-        position: absolute;
-        top: 99%;
-        left: 0;
-        right: 0;
-        border-top: .1rem solid var(--white-clr);
-        border-bottom:  .1rem solid var(--white-clr);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        transition: 0.5s ease-in-out;
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    }
+  header .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    border-top: 0.1rem solid var(--white-clr);
+    border-bottom: 0.1rem solid var(--white-clr);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.5s ease-in-out;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
 
-    header .navbar li {
-        margin: 2rem;
-    }
+  header .navbar li {
+    margin: 2rem;
+  }
 
-    header .navbar.active {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    }
+  header .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
 }
