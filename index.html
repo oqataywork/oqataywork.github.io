@@ -1,67 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Психолог Лейла Алиева</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Психолог Лейла Алиева</title>
 
-  <!-- Custom Styles -->
-  <link rel="stylesheet" href="style.css" />
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css" />
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-</head>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
 
-<body>
-  <!-- Header Section -->
-  <header>
-    <a href="#home" class="logo">
-      <i class="fa-solid fa-tooth"></i>&nbsp;Лейла Алиева<br />
-      <span class="undertext">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;клинический психолог</span>
-    </a>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <a href="#home" class="logo">
+        <i class="fa-solid fa-tooth"></i>&nbsp;Лейла Алиева<br />
+        <span class="undertext"
+          >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;клинический психолог</span
+        >
+      </a>
 
-    <div id="menu-btn" class="fas fa-bars"></div>
+      <div id="menu-btn" class="fas fa-bars"></div>
 
-    <ul class="navbar">
-      <li><a href="#about">Обо мне</a></li>
-      <li><a href="#requests">С чем я работаю?</a></li>
-      <li><a href="#approaches">Мои подходы</a></li>
-      <li><a href="#education">Образование</a></li>
-      <li><a href="#servicecost">Стоимость услуг</a></li>
-      <li><a href="#contacts">Контакты</a></li>
-    </ul>
-  </header>
-  <!-- End Header Section -->
+      <ul class="navbar">
+        <li><a href="#about">Обо мне</a></li>
+        <li><a href="#requests">С чем я работаю?</a></li>
+        <li><a href="#approaches">Мои подходы</a></li>
+        <li><a href="#education">Образование</a></li>
+        <li><a href="#servicecost">Стоимость услуг</a></li>
+        <li><a href="#contacts">Контакты</a></li>
+      </ul>
+    </header>
+    <!-- End Header Section -->
 
-  <!-- Home Section -->
-  <section id="home" class="home">
-    <div class="row">
-      <div class="content">
-        <h3>Психолог Лейла Алиева</h3>
-        <p>Я — ваш партнер, который сопровождает вас на пути перемен.</p>
-        <a href="#about" class="homebtn">Обо мне</a>
-        <a href="#appointment" class="homebtn">Записаться на консультацию</a>
+    <!-- Home Section -->
+    <section id="home" class="home">
+      <div class="row">
+        <div class="content">
+          <h3>Психолог Лейла Алиева</h3>
+          <p>Я — ваш партнер, который сопровождает вас на пути перемен.</p>
+          <a href="#about" class="homebtn">Обо мне</a>
+          <a href="#contacts" class="homebtn">Записаться на консультацию</a>
+        </div>
+        <div class="homeimg">
+          <img src="/Content/Leyla.jpg" alt="Лейла Алиева" />
+        </div>
       </div>
-      <div class="homeimg">
-        <img src="/Content/Leyla.jpg" alt="Лейла Алиева" />
+    </section>
+    <!-- End Home Section -->
+
+    <!-- Contats Section start -->
+
+    <section id="contacts" class="contacts">
+      <h2 class="heading"><span>Записаться </span>на консультацию</h2>
+      <div class="row">
+        <form action="https://api.web3forms.com/submit" method="POST">
+          
+          <input type="hidden" name="access_key" value="71c4a066-be53-462f-aec0-c3205ba7182a">
+
+          <span>Имя</span>
+          <input
+            type="text"
+            class="box"
+            required
+            placeholder="введите ваше имя.."
+            maxlength="50"
+            ,
+            name="name"
+            autocomplete="off"
+          />
+
+          <span>Номер телефона</span>
+          <input
+            type="number"
+            name="number"
+            class="box"
+            required
+            placeholder="введите ваш номер телефона.."
+            max="999999999999"
+            min="5"
+          />
+
+          <span>Никнейм в Telegram (При наличии)</span>
+          <input
+            type="text"
+            class="box"
+            placeholder="введите резервный способ связи"
+            maxlength="50"
+            name="reserve"
+            autocomplete="off"
+          />
+
+          <input type="submit" value="Отправить" class="submit-btn" name="send">
+        </form>
       </div>
-    </div>
-  </section>
-  <!-- End Home Section -->
+    </section>
 
-  <!-- Script -->
-  <script>
-    let menu = document.querySelector("#menu-btn");
-    let navbar = document.querySelector(".navbar");
+    <!-- Contats Section end -->
 
-    menu.onclick = () => {
-      menu.classList.toggle("fa-times");
-      navbar.classList.toggle("active");
-    };
-    navbar.onclick = () => {
+    <!-- footer start -->
+
+    <footer class="footer">
+      <section>
+        <div class="share">
+          <a href="https://t.me/itsalieva" class="fab fa-telegram"></a>
+          <a href="#" class="fab fa-instagram"></a>
+        </div>
+
+        <hr>
+
+        <div class="copyright">Лейла<br> Алиева<span><br>&copy; Все права защищены <span id="currentYear"></span></span></div>
+      </section>
+    </footer>
+    <!-- footer end -->
+
+    <!-- Script -->
+    <script>
+      let menu = document.querySelector("#menu-btn");
+      let navbar = document.querySelector(".navbar");
+
+      menu.onclick = () => {
+        menu.classList.toggle("fa-times");
+        navbar.classList.toggle("active");
+      };
+      navbar.onclick = () => {
         navbar.classList.toggle("active");
         menu.classList.toggle("fa-times");
-    }
-  </script>
-</body>
+      };
+
+      document.getElementById("currentYear").textContent = new Date().getFullYear();
+    </script>
+  </body>
 </html>
