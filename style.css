@@ -360,13 +360,13 @@ header .navbar li a:hover {
   text-align: center;
 }
 
-.container {
+.approaches .container {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-.profile-photo {
+.approaches .profile-photo {
   width: 200px;
   height: 200px;
   border-radius: 50%;
