@@ -155,7 +155,6 @@ header .navbar li a:hover {
 /* Стили для контента внутри ряда */
 .home .row .content {
   flex: 1 1 40rem; /* Гибкость, базовый размер и максимальный размер */
-  width: 50%; /* Ширина контейнера */
   text-align: center; /* Выравнивание текста по центру */
 }
 
@@ -181,8 +180,7 @@ header .navbar li a:hover {
 
 /* Стили для блока изображения */
 .homeimg {
-  width: 50%; /* Ширина блока */
-  height: 96vh; /* Высота блока */
+  height: 98vh; /* Высота блока */
   background-color: var(--green-clr); /* Цвет фона */
   display: flex; /* Используем flexbox */
   flex-direction: column; /* Направление flexbox */
@@ -196,7 +194,7 @@ header .navbar li a:hover {
   width: 50%; /* Ширина изображения */
   height: 70%; /* Высота изображения */
   margin: 2em auto; /* Отступы */
-  border: .5rem solid var(--pink-clr); /* Рамка */
+  border: 0.5rem solid var(--pink-clr); /* Рамка */
 }
 
 .overlay-text {
@@ -229,7 +227,6 @@ header .navbar li a:hover {
   color: var(--green-clr);
 }
 
-
 /*home section mobile */
 @media only screen and (max-width: 768px) {
   /* Для экранов шириной до 768px (мобильные устройства) */
@@ -241,16 +238,18 @@ header .navbar li a:hover {
   .home .row .content {
     order: 2; /* Изменяем порядок отображения */
     width: 100%; /* Ширина занимает всю доступную ширину */
-    height: 15%;
     padding: 1.5rem; /* Добавляем отступы для разделения контента */
-    margin-top: 7%;
+    display: flex; /* Устанавливаем flex-контейнером */
+    flex-direction: column; /* Организуем элементы в столбец */
+    align-items: center; /* Выравниваем элементы по центру по горизонтали */
+    justify-content: center; /* Выравниваем элементы по центру по вертикали */
+    padding-bottom: 10%;
   }
 
   /* Стили для блока с фотографией */
   .home .row .homeimg {
     order: 1; /* Изменяем порядок отображения */
     width: 100%; /* Ширина занимает всю доступную ширину */
-    height: 60vh; /* Уменьшаем высоту блока с фотографией */
     padding: 1.5rem; /* Добавляем отступы для разделения контента */
     margin-top: 13%;
   }
@@ -260,7 +259,7 @@ header .navbar li a:hover {
     width: 60%; /* Ширина изображения */
     height: 80%; /* Высота изображения */
     margin: 2em auto; /* Отступы */
-    border: .5rem solid var(--pink-clr); /* Рамка */
+    border: 0.5rem solid var(--pink-clr); /* Рамка */
   }
 
   /* Стили для кнопок */
@@ -270,6 +269,186 @@ header .navbar li a:hover {
 }
 
 /*home section end */
+
+/* about section start */
+.about {
+  padding: 50px;
+  background-color: #f2f2f2;
+}
+
+.about .content {
+  text-align: center;
+}
+
+.about .stats-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.about .stat {
+  flex: 1;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .stats-container {
+    flex-direction: column;
+  }
+
+  .stat {
+    margin-bottom: 20px;
+  }
+}
+/* about section end */
+
+/* requests section start */
+.requests {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.requests .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.requests .section-title {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.requests-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.requests-list li {
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: 30px;
+  text-align: left;
+}
+
+.requests-list li:before {
+  content: "\2713";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: green; /* Цвет галочки */
+}
+
+@media screen and (min-width: 768px) {
+  .requests-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .requests-list li {
+    flex-basis: calc(50% - 10px);
+    text-align: center;
+  }
+}
+/*requests section end */
+
+/*approaches section start */
+.approaches {
+  text-align: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.profile-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.approaches-title {
+  margin-top: 20px;
+}
+
+.approaches-list {
+  list-style: none;
+  text-align: left;
+  padding: 0;
+}
+
+.approaches-list li {
+  margin-bottom: 20px;
+  padding-right: px; /* Добавляем внутренний отступ для создания рамки */
+}
+/*approaches section end */
+
+/*education section start */
+.education .container {
+  background-color: #ffffff;
+  width: 70%;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.education .title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.education .sub-heading {
+  text-align: left;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.education ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+}
+
+.education .dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #000;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.education .additional-info {
+  margin-top: 20px;
+}
+
+/*education section end */
+
+/*servicecost section start */
+.servicecost {
+  text-align: center;
+}
+
+.service-item {
+  display: inline-block;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #a3d4b5; /* светло-салатовый цвет */
+}
+
+@media screen and (max-width: 600px) {
+  .service-item {
+      display: block;
+  }
+}
+/*servicecost section end */
 
 /*contacts section start */
 
@@ -286,6 +465,12 @@ header .navbar li a:hover {
   padding-top: 2%;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .contacts .row form {
   flex: 1 1 40rem;
   margin: 1rem 5rem;
@@ -299,8 +484,8 @@ header .navbar li a:hover {
   border-radius: 0.5rem;
   background-color: var(--green-clr);
   margin-bottom: 2rem;
-  font-size: var(--medium-fz);
-  height: 10%;
+  font-size: var(--small-fz);
+  height: 40px;
   padding-left: 10px;
 }
 
@@ -326,20 +511,17 @@ header .navbar li a:hover {
   color: var(--green-clr);
 }
 
-
 .contacts .row form span {
   font-size: var(--small-fz);
   color: var(--black-clr);
 }
 
-
 /*contacts section end */
-
 
 /*footer section start */
 
 footer {
-  text-align:  center;
+  text-align: center;
   margin-top: 3rem;
   height: 4.5rem;
 }
@@ -371,7 +553,7 @@ footer .share a {
     left: 0;
     right: 0;
     border-bottom: 0.1rem solid var(--white-clr);
-    background-color: rgba(240,218,203);
+    background-color: rgba(240, 218, 203);
     display: flex;
     flex-direction: column;
     align-items: center;
